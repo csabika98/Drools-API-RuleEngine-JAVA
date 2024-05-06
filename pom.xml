@@ -38,8 +38,65 @@
     	<groupId>org.thymeleaf</groupId>
     	<artifactId>thymeleaf</artifactId>
     </dependency>
-    
- <dependency>
+      <!-- https://mvnrepository.com/artifact/org.mvel/mvel2 -->
+      <dependency>
+          <groupId>org.mvel</groupId>
+          <artifactId>mvel2</artifactId>
+          <version>2.5.2.Final</version>
+      </dependency>
+
+      <!-- Ensuring all Drools dependencies are aligned in version -->
+      <dependency>
+          <groupId>org.kie</groupId>
+          <artifactId>kie-api</artifactId>
+          <version>7.74.1.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.kie</groupId>
+          <artifactId>kie-spring</artifactId>
+          <version>7.74.1.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>drools-core</artifactId>
+          <version>7.74.1.Final</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>org.mvel</groupId>
+                  <artifactId>mvel2</artifactId>
+              </exclusion>
+          </exclusions>
+      </dependency>
+      <dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>drools-compiler</artifactId>
+          <version>7.74.1.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>drools-mvel</artifactId>
+          <version>7.74.1.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>drools-decisiontables</artifactId>
+          <version>7.74.1.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>drools-templates</artifactId>
+          <version>7.74.1.Final</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>drools-xml-support</artifactId>
+          <version>9.44.0.Final</version>
+          <scope>test</scope>
+      </dependency>
+
+
+      <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-thymeleaf</artifactId>
 </dependency>

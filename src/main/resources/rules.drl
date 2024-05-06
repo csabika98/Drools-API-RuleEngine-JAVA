@@ -1,0 +1,11 @@
+package com.hello.world
+
+import com.hello.world.Claim;
+
+rule "Check High Risk"
+when
+    $claim : Claim(type == "high")
+then
+    System.out.println("High risk claim detected.");
+    $claim.setRiskLevel("High");
+end
