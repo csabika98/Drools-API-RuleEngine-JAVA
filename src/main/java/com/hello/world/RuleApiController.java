@@ -23,4 +23,5 @@ public class RuleApiController {
         kieSession.dispose();
         return claim;
     }
+
 }

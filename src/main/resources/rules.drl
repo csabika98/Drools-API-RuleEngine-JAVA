@@ -6,6 +6,24 @@ rule "Check High Risk"
 when
     $claim : Claim(type == "high")
 then
-    System.out.println("High risk claim detected.");
     $claim.setRiskLevel("High");
+    $claim.setMessage("High risk claim detected.");
+end
+
+// Rule for Medium Risk
+rule "Check Medium Risk"
+when
+    $claim : Claim(type == "medium")
+then
+    $claim.setRiskLevel("Medium");
+    $claim.setMessage("Medium risk claim detected.");
+end
+
+// Rule for Low Risk
+rule "Check Low Risk"
+when
+    $claim : Claim(type == "low")
+then
+    $claim.setRiskLevel("Low");
+    $claim.setMessage("Low risk claim detected.");
 end
