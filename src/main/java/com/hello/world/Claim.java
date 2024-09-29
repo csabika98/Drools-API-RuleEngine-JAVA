@@ -1,10 +1,24 @@
 package com.hello.world;
 
-public class Claim {
-    private String type;
-    private String riskLevel;
-    private String message;  // Added field to hold the message
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Claim {
+
+    @XmlElement
+    private String type;
+
+    @XmlElement
+    private String riskLevel;
+
+    @XmlElement
+    private String message;
+
+    // Getters and setters
     public String getType() {
         return type;
     }
@@ -29,3 +43,5 @@ public class Claim {
         this.message = message;
     }
 }
+
+
